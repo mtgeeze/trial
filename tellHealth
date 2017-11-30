@@ -1,0 +1,23 @@
+void  tellHealth(void)  //sound health of all SENSOR units, health is true if unit is online and it's battery is fine
+  {
+  if(myId==DISPLAYUNIT) 
+  {  
+  for (int i = 1; i < 7; i++)
+   {
+    if ((Tx[i].bs)%2==1)   //
+    {
+     byte a=i;
+      {
+      while(a)
+       {
+       flashL(i);      
+       Serial.print(" BEEP ");
+       a--;
+       } 
+     } 
+    delay(200);
+    Serial.print(" PAUSE ");
+    }
+   } 
+  } 
+ }
